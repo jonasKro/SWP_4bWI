@@ -1,15 +1,12 @@
 const loadData = () => {
 
 
-    fetch('https://api.openligadb.de/getbltable/bl1/2021').then((result) => {
+    fetch('https://api.openligadb.de/getbltable/bl2/2021').then((result) => {
         result.json().then((data) => {
 
-                filltable(data)
-                console.log(data)
-            })
-            /*result.json().then((data) => {
-                    getHTMLForTodos(data);
-                }) */
+            filltable(data)
+            console.log(data)
+        })
 
     })
 
@@ -18,26 +15,32 @@ const loadData = () => {
 loadData();
 
 
-//statlist.style.display = "none";
+
 const filltable = (data) => {
 
     let html = "";
     data.forEach(element => {
-        /*
-                html += '<div class="teamoverview">' + '<img src="' + element.teamIconURl + '">' + "</img>" + element.teamName + "    " + '<div class="points">' +
-            element.points + "</div>" + '<img id="buttonimg" src="button.jpg" class="buttonimg" onclick="toggleStats()">' + '</img>' + "</div>";
-        html += '<ul class="teamstats" id="statlist">' + "<li>" + element.draw + "</li>" + "<li>" + element.won + "</li>" + "<li>" + element.lost + "</li>" + "</ul>"
-
-        */
+        html += ' <div class="tablecontent"> \
+        <div class="logoname">\
+            <div>\
+                <img src="' + element.teamIconUrl + '" alt="" class="img"></img>\
+            </div>\
+            <div>\
+            ' + element.teamName + '\
+            </div>\
+        </div>\
+\
+        <div class="teamstats">\
+            <div>' + element.points + '</div>\
+            <div>' + element.matches + '</div>\
+            <div>' + element.won + '</div>\
+            <div>' + element.lost + '</div>\
+            <div>' + element.goals + '</div>\
+            <div>' + element.opponentGoals + '</div>\
+            <div>' + element.goalDiff + '</div>\
+\
+        </div>\
+    </div>\ '
     });
     document.getElementById("output").innerHTML = html;
-}
-
-
-function toggleStats() {
-    document.getElementById("statlist").classList.toggle("show");
-}
-
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
 }
