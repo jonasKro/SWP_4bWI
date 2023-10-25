@@ -1,96 +1,31 @@
-.teamoverview {
-    border-radius: 98px;
-    background-color: #D9D9D9;
-    margin: 20px;
-    text-align: center;
-    width: 500px;
-    height: 100px;
-    font-family: Lalezar;
-    font-weight: 800;
-    font-size: x-large;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: end;
+* {
+    margin: 0px;
 }
 
-.title {
-    background-color: #D9D9D9;
-    position: fixed;
-    top: 0px;
-    border-radius: 49px;
-    background-color: #D9D9D9;
-    margin: 20px;
-    padding: 30px;
-    text-align: center;
-    width: 800px;
-    font-family: Lalezar;
-    font-weight: 800;
-    font-size: 70px;
+.img {
+    height: 155px;
+    width: 129px;
+}
+
+.header {
+    width: 100%;
+    height: 155px;
+    background-color: #A64646;
+    display: flex;
 }
 
 body {
-    background-color: #534242;
-    justify-content: center;
-    align-items: center;
+    background-color: #BCBCBC;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 50px;
     display: flex;
-    margin-top: 200px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.points {
-    margin-left: 50px;
-}
-
-.buttonimg {
-    margin-left: 50px;
-    margin-right: 40px;
-    justify-content: end;
-    width: 50px;
-    height: 30px;
-}
-
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-.dropdown {
-    float: right;
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    right: 0;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {
-    background-color: #ddd;
-}
-
-.show {
-    display: block;
+.reiter {
+    font: Lalezar;
 }
