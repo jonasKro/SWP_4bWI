@@ -17,10 +17,13 @@ loadData();
 const filltable = (data) => {
 
     let html = "";
+
     data.forEach(element => {
+
+        const shortDate = element.matchDateTime.slice(0, 10);
         html += '<div class="gamewrapper">\
         <div class="gamebg">\
-            <div class="datetime"> ' + element.matchDateTime + ' </div>\
+            <div class="datetime"> ' + shortDate + ' </div>\
             <div class="gamestats">\
                 <div class="team1">\
                     <div class="teamwrapper"><img src="' + element.team1.teamIconUrl + '" alt="" class="imgt1"></img>\
@@ -32,7 +35,7 @@ const filltable = (data) => {
                 <div class="team2">\
 \
                     <div class="teamwrapper">\
-                        <div class="teamname">' + element.team1.teamName + '</div>\
+                        <div class="teamname">' + element.team2.teamName + '</div>\
                         <img src="' + element.team2.teamIconUrl + '" alt="" class="imgt2"></img>\
 \
                     </div>\
